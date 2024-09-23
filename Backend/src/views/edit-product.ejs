@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sửa sản phẩm</title>
+    <link rel="stylesheet" href="/styles/edit-product.css" />
+  </head>
+  <body>
+    <h1>Sửa sản phẩm</h1>
+    <form action="/edit-product/<%= product.id %>" method="POST">
+      <div>
+        <label for="TenSanPham">Tên sản phẩm:</label>
+        <input
+          type="text"
+          id="TenSanPham"
+          name="TenSanPham"
+          value="<%= product.TenSanPham %>"
+          required
+        />
+      </div>
+      <div>
+        <label for="Gia">Giá:</label>
+        <input
+          type="number"
+          id="Gia"
+          name="Gia"
+          value="<%= product.Gia %>"
+          required
+        />
+      </div>
+      <div>
+        <label for="MoTa">Mô Tả:</label>
+        <textarea id="MoTa" name="MoTa" required><%= product.MoTa %></textarea>
+      </div>
+      <div>
+        <label for="SoLuongTon">Số Lượng Tồn:</label>
+        <input
+          type="number"
+          id="SoLuongTon"
+          name="SoLuongTon"
+          value="<%= product.SoLuongTon %>"
+          required
+        />
+      </div>
+      <div>
+        <label for="MaLoaiSanPham">Mã Loại Sản Phẩm:</label>
+        <input
+          type="number"
+          id="MaLoaiSanPham"
+          name="MaLoaiSanPham"
+          value="<%= product.MaLoaiSanPham %>"
+          required
+        />
+      </div>
+      <button type="submit">Lưu Thay Đổi</button>
+    </form>
+  </body>
+</html>

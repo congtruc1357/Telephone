@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="/styles/home.css" />
+  </head>
+  <body>
+    <h1>Quản lý sản phẩm</h1>
+    <a href="/add-product" class="add-button">Thêm sản phẩm</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên sản phẩm</th>
+          <th>Giá</th>
+          <th>Mô tả</th>
+          <th>Số lượng tồn</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(product => { %>
+        <tr>
+          <td><%= products.TenSanPham %></td>
+          <td><%= products.Gia %></td>
+          <td><%= products.MoTa %></td>
+          <td><%= products.SoLuongTon %></td>
+          <td>
+            <a href="/edit-product/<%= product.id %>">Sửa</a>
+            <a href="/delete-product/<%= product.id %>">Xóa</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>

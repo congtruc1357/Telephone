@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Sản Phẩm</title>
+    <link href="/styles/add-product.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Thêm Sản Phẩm Mới</h1>
+    <form action="/add-product" method="POST">
+      <div>
+        <label for="TenSanPham">Tên Sản Phẩm:</label>
+        <input type="text" id="TenSanPham" name="TenSanPham" required />
+      </div>
+      <div>
+        <label for="Gia">Giá:</label>
+        <input type="number" id="Gia" name="Gia" required />
+      </div>
+      <div>
+        <label for="MoTa">Mô Tả:</label>
+        <textarea id="MoTa" name="MoTa" required></textarea>
+      </div>
+      <div>
+        <label for="SoLuongTon">Số Lượng Tồn:</label>
+        <input type="number" id="SoLuongTon" name="SoLuongTon" required />
+      </div>
+      <div>
+        <label for="MaLoaiSanPham">Mã Loại Sản Phẩm:</label>
+        <input type="number" id="MaLoaiSanPham" name="MaLoaiSanPham" required />
+      </div>
+      <button type="submit">Thêm Sản Phẩm</button>
+    </form>
+  </body>
+</html>
